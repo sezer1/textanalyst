@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Styled Form Example</title>
+  <style>
+    /* Style the form element */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    /* Style the input elements */
+    input[type=text] {
+      width: 300px;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      border: none;
+      background-color: #f2f2f2;
+      font-size: 18px;
+    }
+
+    /* Style the submit button */
+    input[type=submit] {
+      width: 200px;
+      padding: 10px;
+      margin: 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* Style the submit button on hover */
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    /* Style the text box */
+    .output {
+      width: 300px;
+      padding: 10px;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+<form action="/send-text" method="POST">
+  <label for="text1">Text 1:</label>
+  <input type="text" name="text1" id="text1"><br>
+  <label for="text2">Text 2:</label>
+  <input type="text" name="text2" id="text2"><br>
+  <input type="submit" value="Submit">
+</form>
+
+<!-- Display the text input in a box -->
+<div class="output">
+  <p>Text 1: ${combinedText}</p>
+  <p></p>
+</div>
+</body>
+</html>
